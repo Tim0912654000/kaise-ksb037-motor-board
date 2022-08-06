@@ -1,11 +1,13 @@
 {
-    "name": "KAISE KSB037 Motor Board",
+    "name": "KAISE KSB037 Motor Board_P1P8Motor_P0CSD_P15DS18B20_P16WS2812B",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "microbit-dstemp": "github:bsiever/microbit-dstemp#v0.1.26"
+        "microbit-dstemp": "github:bsiever/microbit-dstemp#v0.1.26",
+        "ws2812b": "github:microsoft/pxt-ws2812b#v0.1.2",
+        "neopixel": "github:microsoft/pxt-neopixel#v0.7.3"
     },
     "files": [
         "main.blocks",
