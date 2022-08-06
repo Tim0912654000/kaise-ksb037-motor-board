@@ -4,7 +4,6 @@ function doMotor12STOP () {
 input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.Yes)
     doMotor12()
-    strip = neopixel.create(DigitalPin.P16, 8, NeoPixelMode.RGB)
     strip.showColor(neopixel.colors(NeoPixelColors.White))
 })
 function doMotor12 () {
@@ -14,10 +13,13 @@ function doMotor12 () {
 input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.No)
     doMotor12STOP()
+    strip.showColor(neopixel.colors(NeoPixelColors.Black))
 })
 let light2 = 0
 let strip: neopixel.Strip = null
 basic.showIcon(IconNames.Heart)
+strip = neopixel.create(DigitalPin.P16, 8, NeoPixelMode.RGB)
+strip.clear()
 basic.forever(function () {
     basic.showString("" + (Math.round(dstemp.celsius(DigitalPin.P15))))
     basic.showString("/")
